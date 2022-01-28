@@ -3,10 +3,10 @@ const {theme} = Astro.props
 ---
 
 <div id="about" data-theme={theme}>
-  <h2>Hi, I'm <strong>Lachlan</strong></h2>
-  <div className='two-col'>
-    <img className="profile-picture" src="../../images/min/profile.jpg" alt="Me playing bass"/>
-    <div className='summary'>
+  <h2>Hi, I'm <b>Lachlan</b></h2>
+  <div class='two-col'>
+    <img class="profile-picture" src="./images/profile.jpg" alt="Me playing bass"/>
+    <div class='summary'>
       <p>I'm an eager frontend developer based in Canberra, doing my best to keep up with and learn the latest
         technologies in the rapidly advancing world of web development.</p>
 
@@ -35,132 +35,129 @@ const {theme} = Astro.props
   </div>
 </div>
 
-<style>
-  #about {
-  overflow-y: auto;
-  padding: 10% 20%;
+<style lang="scss">
 
-    [data-theme='z-index'] {
-      position: relative;
-      z-index: 1;
+#about {
+overflow-y: auto;
+padding: 10% 20%;
+
+  [data-theme='z-index'] {
+    position: relative;
+    z-index: 1;
+  }
+
+  h2 {
+    font-family: Metropolis, Montserrat, Arial, Helvetica, sans-serif;
+    font-size: 6.4rem;
+    font-weight: 100;
+    margin: 0 0 80px;
+    text-align: center;
+
+    b {
+      font-weight: 900;
     }
 
-    h2 {
-      color: var(--dark);
-      font-family: Metropolis, Montserrat, Arial, Helvetica, sans-serif;
-      font-size: 6.4rem;
-      font-weight: 100;
-      margin: 0 0 80px;
-      text-align: center;
-
-      b {
-        font-weight: 900;
-      }
-
-      &::after {
-        animation: blink 1s steps(1, start) infinite;
-        background: var(--dark);
-        content: '';
-        display: inline-block;
-        height: 50px;
-        margin-bottom: -5px;
-        margin-left: 7px;
-        opacity: 0;
-        width: 3px;
-      }
-    }
-
-    @keyframes blink {
-      50% {
-        opacity: 0;
-      }
-
-      100% {
-        opacity: 1;
-      }
+    &::after {
+      animation: blink 1s steps(1, start) infinite;
+      background: var(--dark);
+      content: '';
+      display: inline-block;
+      height: 50px;
+      margin-bottom: -5px;
+      margin-left: 7px;
+      opacity: 0;
+      width: 3px;
     }
   }
 
-  .profilePictureWrapper {
-    flex: 0 0 auto;
-    margin: 20px;
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
 
-    .profilePicture {
-      background-color: #000;
-      border-radius: 20%;
+    100% {
+      opacity: 1;
     }
   }
+}
 
-  .twoCol {
+.profile-picture {
+  background-color: #000;
+  border-radius: 20%;
+}
+ 
+
+.two-col {
+  align-items: center;
+  display: flex;
+}
+
+.buttonWrapper {
+  display: inline-block;
+  perspective: 500px;
+}
+
+a.buttonWrapper {
+  color: unset;
+  font-size: unset;
+  line-height: unset;
+}
+
+.button {
+  cursor: pointer;
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin: auto;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: all ease 0.35s;
+
+  .default,
+  .hover {
     align-items: center;
     display: flex;
+    justify-content: center;
+    text-transform: uppercase;
   }
 
-  .buttonWrapper {
-    display: inline-block;
-    perspective: 500px;
+  .default {
+    background-color: var(--dark);
+    color: #fff;
+    transition: background 0.35s ease;
   }
 
-  a.buttonWrapper {
-    color: unset;
-    font-size: unset;
-    line-height: unset;
+  .hover {
+    background-color: #eee;
+    color: #2d313a;
+    transition: background 0.35s ease;
   }
 
-  .button {
-    cursor: pointer;
-    font-size: 1.125rem;
-    font-weight: bold;
-    margin: auto;
-    text-align: center;
-    transform-style: preserve-3d;
-    transition: all ease 0.35s;
-
-    .default,
-    .hover {
-      align-items: center;
-      display: flex;
-      justify-content: center;
-      text-transform: uppercase;
-    }
-
+  &:hover {
     .default {
-      background-color: var(--dark);
-      color: #fff;
-      transition: background 0.35s ease;
+      background-color: #2d313a;
+      color: #eee;
     }
 
     .hover {
-      background-color: #eee;
-      color: #2d313a;
-      transition: background 0.35s ease;
+      background-color: #fff;
+      color: var(--dark);
     }
 
     &:hover {
-      .default {
-        background-color: #2d313a;
-        color: #eee;
-      }
+      transform: rotateX(-90deg);
+    }
 
+    &:active {
       .hover {
-        background-color: #fff;
-        color: var(--dark);
-      }
-
-      &:hover {
-        transform: rotateX(-90deg);
-      }
-
-      &:active {
-        .hover {
-          background-color: #ddd;
-          transition: background-color 0.01s linear;
-        }
+        background-color: #ddd;
+        transition: background-color 0.01s linear;
       }
     }
   }
+}
 
-  .buttons {
-    text-align: center;
-  }
+.buttons {
+  text-align: center;
+}
+
 </style>

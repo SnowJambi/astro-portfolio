@@ -1,9 +1,10 @@
 ---
 // Component Imports
-import Arrows from '../components/Arrows.astro';
 import AngledDiv from '../components/AngledDiv.astro'
 import Section from '../components/Section.astro'
 import About from '../components/About.astro'
+import Favicons from '../components/Favicons.astro'
+import Intro from '../components/Intro.astro'
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
@@ -14,25 +15,15 @@ import About from '../components/About.astro'
 		<meta charset="utf-8" />
 		<title>Lachlan Jadezak | Portfolio</title>
     <meta name='description' content='Junior web developer based in Canberra, Australia.' key='description' />
-		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 		<link rel="stylesheet" type="text/css" href={Astro.resolve('../styles/reset.scss')} />
 		<link rel="stylesheet" type="text/css" href={Astro.resolve('../styles/index.scss')} />
+		<Favicons />
 	</head>
 	<body>
     <div class='fixed-border-top' />
     <div class='fixed-border-bottom' />
 		<div class='fixed-top'>
-		  <div class='intro'>
-		    <header>
-		  	  <div style='margin: auto' >
-		  	    <img class='logo' src={Astro.resolve('../images/logo-lj.png')} alt='LJ logo' />
-		  	    <h1>
-		  		    LACHLAN <b>JADEZAK</b>
-		  	    </h1>
-		  	  </div>
-		    </header>
-		    <Arrows link={'#about'} />
-		  </div>
+		  <Intro />
       <AngledDiv invert={true} color={'var(--grad-green)'}/>
 			<Section variant={'green'} theme={'z-index'}>
 				<About />
