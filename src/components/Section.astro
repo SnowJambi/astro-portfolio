@@ -1,0 +1,26 @@
+---
+const {variant = 'dark'} = Astro.props
+---
+
+<div class={variant}>
+  <slot />
+</div>
+
+<style lang="scss">
+  .dark {
+    background: var(--grad-dark);
+
+    h2 {
+      color: #fff;
+    }
+  }
+
+  .green {
+    background: var(--grad-green);
+
+    h2,
+    p {
+      color: var(--dark);
+    }
+  }
+</style>
