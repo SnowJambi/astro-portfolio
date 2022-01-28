@@ -1,11 +1,11 @@
 ---
-const {theme} = Astro.props
+
 ---
 
-<div id="about" data-theme={theme}>
+<div id='about'>
   <h2>Hi, I'm <b>Lachlan</b></h2>
   <div class='two-col'>
-    <img class="profile-picture" src="./images/profile.jpg" alt="Me playing bass"/>
+    <img class='profile-picture' src='./images/profile.jpg' alt='Me playing bass'/>
     <div class='summary'>
       <p>I'm an eager frontend developer based in Canberra, doing my best to keep up with and learn the latest
         technologies in the rapidly advancing world of web development.</p>
@@ -27,7 +27,7 @@ const {theme} = Astro.props
       <p>If I'm not working I'm probably playing some bass guitar, out riding my motorbike or sitting back
         watching the
         MotoGP with an IPA.</p>
-      <div className="buttons" style={{marginTop: "40px"}}>
+      <div className='buttons' style={{marginTop: '40px'}}>
         <!-- <FlipButton text={'Resumé'} url={'/resume.pdf'}/>
         <FlipButton text={'Contact Me'} url={'#contact'}/> -->
       </div>
@@ -35,16 +35,11 @@ const {theme} = Astro.props
   </div>
 </div>
 
-<style lang="scss">
+<style lang='scss'>
 
 #about {
 overflow-y: auto;
 padding: 10% 20%;
-
-  [data-theme='z-index'] {
-    position: relative;
-    z-index: 1;
-  }
 
   h2 {
     font-family: Metropolis, Montserrat, Arial, Helvetica, sans-serif;

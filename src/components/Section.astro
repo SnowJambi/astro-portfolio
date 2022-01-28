@@ -1,19 +1,15 @@
 ---
-const {variant = 'dark'} = Astro.props
+const {color = 'var(--grad-dark)', text} = Astro.props
 ---
 
-<div class={variant}>
+<div class={text} style=`background: ${color};`>
   <slot />
 </div>
 
-<style lang="scss">
+<style lang='scss'>
 
-.dark {
-  background: var(--grad-dark);
-}
-
-.green {
-  background: var(--grad-green);
+div {
+  position: relative;
 }
 
 </style>

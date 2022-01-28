@@ -76,14 +76,6 @@ a {
   text-decoration: unset;
 }
 
-i {
-  background: linear-gradient(130deg, var(--green), #85a928);
-  background-clip: text;
-  color: var(--grey);
-  font-size: 120px;
-  -webkit-text-fill-color: transparent;
-}
-
 .fixed-bg {
   background: var(--grad-bg);
   height: 100%;
@@ -112,26 +104,21 @@ i {
   z-index: 99;
 }
 
-.green {
+.fixed-top {
+  height: 200%;
+}
+
+.dark {
   h2, p {
     color: var(--dark);
   }
 }
 
-.dark {
+.light {
   h2, p {
     color: #fff
   }
 }
-
-.fixed-top {
-  height: 200%;
-}
-
-// Intro section
-
-
-// About section
 
 
 // Skills section

@@ -11,5 +11,8 @@
   "devDependencies": {
     "astro": "^0.22.18",
     "autoprefixer": "^10.4.2"
+  },
+  "dependencies": {
+    "devicon": "^2.14.0"
   }
 }

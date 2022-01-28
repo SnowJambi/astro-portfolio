@@ -5,18 +5,20 @@ import Section from '../components/Section.astro'
 import About from '../components/About.astro'
 import Favicons from '../components/Favicons.astro'
 import Intro from '../components/Intro.astro'
+import Tech from '../components/Tech.astro'
+import 'devicon/devicon.min.css'
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
 
-<html lang="en">
+<html lang='en'>
 	<head>
-		<meta charset="utf-8" />
+		<meta charset='utf-8' />
 		<title>Lachlan Jadezak | Portfolio</title>
     <meta name='description' content='Junior web developer based in Canberra, Australia.' key='description' />
-		<link rel="stylesheet" type="text/css" href={Astro.resolve('../styles/reset.scss')} />
-		<link rel="stylesheet" type="text/css" href={Astro.resolve('../styles/index.scss')} />
+		<link rel='stylesheet' type='text/css' href={Astro.resolve('../styles/reset.scss')} />
+		<link rel='stylesheet' type='text/css' href={Astro.resolve('../styles/index.scss')} />
 		<Favicons />
 	</head>
 	<body>
@@ -25,17 +27,18 @@ import Intro from '../components/Intro.astro'
 		<div class='fixed-top'>
 		  <Intro />
       <AngledDiv invert={true} color={'var(--grad-green)'}/>
-			<Section variant={'green'} theme={'z-index'}>
+			<Section text={'dark'} color={'var(--grad-green)'}>
 				<About />
+			</Section>
+			<AngledDiv invert={false} color={'var(--grad-dark)'}/>
+			<Section text={'light'} color:{'var(--grad-dark)'}>
+				<Tech />
 			</Section>
 	  </div>
 		
 	</body>
 </html>
 
-<style lang="scss">
-	.fixed-top :global(.green){
-		position: relative;
-		z-index: 10;
-	}
+<style lang='scss'>
+
 </style>
