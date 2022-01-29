@@ -6,7 +6,7 @@ import Favicons from '../components/Favicons.astro'
 import Intro from '../components/Intro.astro'
 import Tech from '../components/Tech.astro'
 import Projects from '../components/Projects.astro'
-import 'devicon/devicon.min.css'
+import Contact from '../components/Contact.astro'
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
@@ -36,7 +36,12 @@ import 'devicon/devicon.min.css'
 		<Section text={'dark'} color={'var(--grad-green)'} angled=false>
 			<Projects />
 		</Section>
-		
+		<Section text={'light'} color={'var(--grad-dark)'}>
+			<Contact />
+		</Section>
+		<footer class='footer'>
+      <p>© 2022 Lachlan Jadezak</p>
+    </footer>
 	</body>
 </html>
 

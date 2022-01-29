@@ -25,13 +25,6 @@
 @font-face {
   font-display: swap;
   font-family: Metropolis;
-  font-weight: 200;
-  src: url('/fonts/metropolis/Metropolis-ExtraLight.woff2'), url('/fonts/metropolis/Metropolis-ExtraLight.woff');
-}
-
-@font-face {
-  font-display: swap;
-  font-family: Metropolis;
   font-weight: 300;
   src: url('/fonts/metropolis/Metropolis-Light.woff2'), url('/fonts/metropolis/Metropolis-Light.woff');
 }
@@ -50,7 +43,7 @@
   src: url('/fonts/montserrat/Montserrat-Medium.woff2'), url('/fonts/montserrat/Montserrat-Medium.woff');
 }
 
-// Global selectors and reused elements
+// Global selectors and index level stuff
 body {
     background: var(--grad-bg);
     padding: 40px 40px 0;
@@ -74,14 +67,6 @@ a {
 
 a {
   text-decoration: unset;
-}
-
-.fixed-bg {
-  background: var(--grad-bg);
-  height: 100%;
-  position: fixed;
-  width: 100%;
-  z-index: -1;
 }
 
 .fixed-border-top {
@@ -120,76 +105,10 @@ a {
   }
 }
 
-
-
-
-// Contact section
-.contact {
-  padding: 10% 13%;
-
-  ul {
-    list-style: none;
-  }
-
-  li {
-    margin: 20px 0;
-  }
-}
-
-.contactFlex {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.contactImg {
-  object-fit: contain;
-}
-
-.contactItem {
-  display: flex;
-
-  span {
-    margin-right: 10px;
-  }
-}
-
-.contactImgWrapper {
-  margin: auto;
-}
-
-.contactDetails {
-  margin: auto;
-
-  ul {
-    padding: 0;
-  }
-}
-
-.invert {
-  filter: invert(1);
-}
-
-.svg {
-  filter: invert(1);
-  margin-right: 20px;
-  padding-bottom: 4px;
-  vertical-align: middle;
-}
-
-@media (max-width: 600px) {
-  #contact {
-    padding: 10% 5%;
-
-    a {
-      font-size: 0.9rem;
-    }
-  }
-}
-
-// Footer section
 .footer {
   background: var(--grad-dark);
-  padding-bottom: 70px;
+  height: 75px;
+  position: relative;
 
   p {
     color: #777;

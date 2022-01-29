@@ -8,11 +8,11 @@ import data from '../data/projects.json'
   <h2>What I've Been Working On</h2>
   <div class='projects-grid'>
     {data.projects.map((project) => (
-        <a href={project.url}>
+      <a href={project.url}>
         <Tilt client:visible>
           <Project title={project.title} body={project.body} image={project.image} />
         </Tilt>
-        </a>
+      </a>
     ))}
   </div>
 </div>

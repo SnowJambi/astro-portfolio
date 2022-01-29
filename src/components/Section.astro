@@ -12,9 +12,10 @@ const angledClass = angled ? `${text} angled` : text
 div {
   position: relative;
   margin-top: -100px;
-  &.angled {
-    clip-path: polygon(0px 0, 100% 100px, 100% 100%, 0px calc(100% - 100px));
-  }
+}
+
+.angled {
+  clip-path: polygon(0px 0, 100% 100px, 100% 100%, 0px calc(100% - 100px));
 }
 
 .light {

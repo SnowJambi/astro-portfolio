@@ -12,61 +12,37 @@ const {link} = Astro.props
 <style lang='scss'>
 
 a {
-    bottom: 50px;
-    display: flex;
-    height: 100px;
-    margin: 0 auto;
-    position: relative;
-    width: 100px;
-  }
+  bottom: 50px;
+  display: flex;
+  height: 100px;
+  margin: 0 auto;
+  position: relative;
+  width: 100px;
+}
 
-  .scrollDown {
-  animation: fade-move-down 2s ease-in-out infinite;
-  border-bottom: 2px solid var(--grey);
-  border-right: 2px solid var(--grey);
-  height: 13px;
-  width: 13px;
+.scrollDown {
+animation: fade-move-down 2s ease-in-out infinite;
+border-bottom: 2px solid var(--grey);
+border-right: 2px solid var(--grey);
+height: 13px;
+width: 13px;
 
-  &:last-child {
-    animation: fade-move-down2 2s ease-in-out infinite;
+&:last-child {
+  animation: fade-move-down2 2s ease-in-out infinite;
   }
 }
 
 @keyframes fade-move-down {
-  0% {
-    opacity: 0;
-    transform: translate(0, -10px) rotate(45deg);
-  }
-
-  50% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-    transform: translate(0, 10px) rotate(45deg);
-  }
+  0% { opacity: 0; transform: translate(0, -10px) rotate(45deg); }
+  50% { opacity: 1; }
+  100% { opacity: 0; transform: translate(0, 10px) rotate(45deg); }
 }
 
 @keyframes fade-move-down2 {
-  0% {
-    opacity: 0;
-    transform: translate(0, 10px) rotate(45deg);
-  }
-
-  15% {
-    opacity: 0;
-    transform: translate(0, -10px) rotate(45deg);
-  }
-
-  50% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-    transform: translate(0, 12px) rotate(45deg);
-  }
+  0% { opacity: 0; transform: translate(0, 10px) rotate(45deg); }
+  15% { opacity: 0; transform: translate(0, -10px) rotate(45deg); }
+  50% { opacity: 1; }
+  100% { opacity: 0; transform: translate(0, 12px) rotate(45deg); }
 }
 
 @keyframes grain {
