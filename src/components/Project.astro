@@ -1,0 +1,33 @@
+---
+const {title, body, image} = Astro.props
+---
+
+<img class='projectImg' alt={image.alt} src={image.path} />
+<h2>{title}</h2>
+<p>{body}</p>
+
+<style lang="scss">
+
+h2,
+p {
+  transition: 1s;
+}
+
+ h2 {
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+  margin: 20px;
+}
+ 
+ p {
+  color: var(--grey);
+  margin: 20px;
+}
+
+.projectImg {
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+}
+
+</style>

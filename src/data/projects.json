@@ -1,0 +1,49 @@
+{
+  "projects": [
+    {
+      "image": {
+        "path": "/images/portfolio.png",
+        "alt": "Jadezak website preview"
+      },
+      "title": "Jadezak.com",
+      "body": "I've rebuilt my website on Next.js to gain experience working with React, improve its performance, and update the styling!",
+      "url": "#"
+    },
+    {
+      "image": {
+        "path": "/images/eplogo.png",
+        "alt": "Eminence Projectiles Logo preview"
+      },
+      "title": "Eminence Projectiles Logo Design",
+      "body": "A logo designed for the projectile manufacturing company Eminence Projectiles.",
+      "url": "/eplogo"
+    },
+    {
+      "image": {
+        "path": "/images/fem-four.png",
+        "alt": "Four card project preview"
+      },
+      "title": "Four Card Feature",
+      "body": "A Front End Mentor challenge, bare HTML markup is given along with some designs, leaving it up to you to complete the styling.",
+      "url": "/four-card"
+    },
+    {
+      "image": {
+        "path": "/images/fem-fylo.png",
+        "alt": "Fylo landing page project preview"
+      },
+      "title": "Fylo Landing Page",
+      "body": "A Front End Mentor challenge, bare HTML markup is given along with some designs, leaving it up to you to complete the styling.",
+      "url": "/fylo"
+    },
+    {
+      "image": {
+        "path": "/images/social-media.png",
+        "alt": "Social Media Dashboard project preview"
+      },
+      "title": "Social Media Dashboard",
+      "body": "A Front End mentor challenge to create a social media dashboard with switchable light and dark modes.",
+      "url": "/social-media"
+    }
+  ]
+}

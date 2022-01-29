@@ -1,11 +1,11 @@
 ---
 // Component Imports
-import AngledDiv from '../components/AngledDiv.astro'
 import Section from '../components/Section.astro'
 import About from '../components/About.astro'
 import Favicons from '../components/Favicons.astro'
 import Intro from '../components/Intro.astro'
 import Tech from '../components/Tech.astro'
+import Projects from '../components/Projects.astro'
 import 'devicon/devicon.min.css'
 
 // Full Astro Component Syntax:
@@ -24,17 +24,18 @@ import 'devicon/devicon.min.css'
 	<body>
     <div class='fixed-border-top' />
     <div class='fixed-border-bottom' />
-		<div class='fixed-top'>
+		<div class='fixed-intro'>
 		  <Intro />
-      <AngledDiv invert={true} color={'var(--grad-green)'}/>
-			<Section text={'dark'} color={'var(--grad-green)'}>
+	  </div>
+		<Section text={'dark'} color={'var(--grad-green)'} angled=false>
 				<About />
 			</Section>
-			<AngledDiv invert={false} color={'var(--grad-dark)'}/>
-			<Section text={'light'} color:{'var(--grad-dark)'}>
-				<Tech />
-			</Section>
-	  </div>
+		<Section text={'light'} color={'var(--grad-dark)'}>
+			<Tech />
+		</Section>
+		<Section text={'dark'} color={'var(--grad-green)'} angled=false>
+			<Projects />
+		</Section>
 		
 	</body>
 </html>

@@ -1,5 +1,5 @@
 ---
-
+import FlipButton from './FlipButton.astro'
 ---
 
 <div id='about'>
@@ -27,9 +27,9 @@
       <p>If I'm not working I'm probably playing some bass guitar, out riding my motorbike or sitting back
         watching the
         MotoGP with an IPA.</p>
-      <div className='buttons' style={{marginTop: '40px'}}>
-        <!-- <FlipButton text={'Resumé'} url={'/resume.pdf'}/>
-        <FlipButton text={'Contact Me'} url={'#contact'}/> -->
+      <div class='buttons'>
+        <FlipButton text={'Resumé'} link={'/resume.pdf'} />
+        <FlipButton text={'Contact Me'} link={'#contact'} />
       </div>
     </div>
   </div>
@@ -87,72 +87,8 @@ padding: 10% 20%;
   display: flex;
 }
 
-.buttonWrapper {
-  display: inline-block;
-  perspective: 500px;
-}
-
-a.buttonWrapper {
-  color: unset;
-  font-size: unset;
-  line-height: unset;
-}
-
-.button {
-  cursor: pointer;
-  font-size: 1.125rem;
-  font-weight: bold;
-  margin: auto;
-  text-align: center;
-  transform-style: preserve-3d;
-  transition: all ease 0.35s;
-
-  .default,
-  .hover {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    text-transform: uppercase;
-  }
-
-  .default {
-    background-color: var(--dark);
-    color: #fff;
-    transition: background 0.35s ease;
-  }
-
-  .hover {
-    background-color: #eee;
-    color: #2d313a;
-    transition: background 0.35s ease;
-  }
-
-  &:hover {
-    .default {
-      background-color: #2d313a;
-      color: #eee;
-    }
-
-    .hover {
-      background-color: #fff;
-      color: var(--dark);
-    }
-
-    &:hover {
-      transform: rotateX(-90deg);
-    }
-
-    &:active {
-      .hover {
-        background-color: #ddd;
-        transition: background-color 0.01s linear;
-      }
-    }
-  }
-}
-
 .buttons {
-  text-align: center;
+  margin-top: 40px;
 }
 
 </style>

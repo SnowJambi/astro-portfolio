@@ -1,8 +1,9 @@
 ---
-const {color = 'var(--grad-dark)', text} = Astro.props
+const {color = 'var(--grad-dark)', text, angled} = Astro.props
+const angledClass = angled ? `${text} angled` : text
 ---
 
-<div class={text} style=`background: ${color};`>
+<div class={angledClass} style=`background: ${color};`>
   <slot />
 </div>
 
@@ -10,6 +11,18 @@ const {color = 'var(--grad-dark)', text} = Astro.props
 
 div {
   position: relative;
+  margin-top: -100px;
+  &.angled {
+    clip-path: polygon(0px 0, 100% 100px, 100% 100%, 0px calc(100% - 100px));
+  }
+}
+
+.light {
+  z-index: 1;
+}
+
+.dark {
+  z-index: 2;
 }
 
 </style>

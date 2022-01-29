@@ -1,0 +1,71 @@
+---
+import Project from './Project.astro'
+import Tilt from './Tilt.jsx'
+import data from '../data/projects.json'
+---
+
+<div class='projects'>
+  <h2>What I've Been Working On</h2>
+  <div class='projects-grid'>
+    {data.projects.map((project) => (
+        <a href={project.url}>
+        <Tilt client:visible>
+          <Project title={project.title} body={project.body} image={project.image} />
+        </Tilt>
+        </a>
+    ))}
+  </div>
+</div>
+
+<style lang="scss">
+
+a {
+  margin: 0;
+}
+
+.projects {
+  padding: 10% 13%;
+
+  :global(.project) {
+    background: #232526 linear-gradient(to right, #333, #232526);
+    border-radius: 10px;
+    box-shadow: 0 0 9px 3px rgb(0 0 0 / 27.5%);
+    height: 450px;
+    transform-style: preserve-3d;
+    &:hover {
+      :global(h2) {
+        transform: translateZ(100px);
+      }
+
+      :global(p) {
+        transform: translateZ(50px);
+      }
+    }
+  }
+
+  @media (max-width: 800px) {
+    :global(.project) {
+      height: auto;
+      max-width: 300px;
+      min-height: 450px;
+      width: auto;
+    }
+  }
+}
+
+.projects-grid {
+  display: grid;
+  gap: 75px;
+  grid-template-columns: repeat(auto-fit, minmax(150px,300px));
+  justify-content: center;
+  max-width: 1050px;
+  margin: auto;
+}
+
+@media (max-width: 1300px) {
+  .projects {
+    padding: 10% 7.5%;
+  }
+}
+
+</style>

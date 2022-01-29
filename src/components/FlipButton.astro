@@ -1,0 +1,82 @@
+---
+const {link, height=45, width=175, text, unit='px'} = Astro.props
+---
+
+<a href={link} class='button-wrapper'>
+  <div class='button' style=`height: ${height}${unit}; width: ${width}${unit};`>
+    <div class='default' style=`height: ${height}${unit}; transform: translateZ(${height/2}${unit});`>{text}</div>
+    <div class='hover' style=`height:${height}${unit}; transform: rotateX(90deg) translateZ(${height*1.5}${unit});`>{text}</div>
+  </div>
+</a>
+
+<style lang="scss">
+
+.button-wrapper {
+  display: inline-block;
+  perspective: 500px;
+}
+
+a.button-wrapper {
+  color: unset;
+  font-size: unset;
+  line-height: unset;
+}
+
+.button {
+  cursor: pointer;
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin: auto;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: all ease 0.35s;
+
+  .default,
+  .hover {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+
+  .default {
+    background-color: var(--dark);
+    color: #fff;
+    transition: background 0.35s ease;
+  }
+
+  .hover {
+    background-color: #eee;
+    color: #2d313a;
+    transition: background 0.35s ease;
+  }
+
+  &:hover {
+    .default {
+      background-color: #2d313a;
+      color: #eee;
+    }
+
+    .hover {
+      background-color: #fff;
+      color: var(--dark);
+    }
+
+    &:hover {
+      transform: rotateX(-90deg);
+    }
+
+    &:active {
+      .hover {
+        background-color: #ddd;
+        transition: background-color 0.01s linear;
+      }
+    }
+  }
+}
+
+.buttons {
+  text-align: center;
+}
+
+</style>
