@@ -20,10 +20,16 @@ div {
 
 .light {
   z-index: 1;
+  :global(h2), :global(p) {
+    color: #fff;
+  }
 }
 
 .dark {
   z-index: 2;
+  :global(h2), :global(p) {
+    color: var(--dark);
+  }
 }
 
 </style>

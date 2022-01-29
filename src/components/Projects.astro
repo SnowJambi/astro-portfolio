@@ -32,6 +32,21 @@ a {
     box-shadow: 0 0 9px 3px rgb(0 0 0 / 27.5%);
     height: 450px;
     transform-style: preserve-3d;
+
+    :global(h2) {
+      transition: 0.5s;
+      color: #fff;
+      font-size: 2rem;
+      text-align: center;
+      margin: 20px;
+    }
+
+    :global(p) {
+      transition: 0.5s;
+      color: var(--grey);
+      margin: 20px;
+    }
+
     &:hover {
       :global(h2) {
         transform: translateZ(100px);
