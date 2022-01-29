@@ -1,0 +1,132 @@
+body {
+    background-color: hsl(0, 0%, 98%);
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-weight: 200;
+    text-align: center;
+    margin-top: 50px;
+    color: hsl(234, 12%, 34%);
+}
+
+h2 {
+    color: hsl(234, 12%, 34%);
+    margin-left: 30px;
+}
+
+p {
+    color: hsl(229, 6%, 66%);
+    margin: 0 30px;
+    font-size: 15px;
+}
+
+.about {
+    text-align: center;
+    width: 500px;
+    margin: 0 auto;
+    font-size: 15px;
+    color: hsl(229, 6%, 66%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 500px 500px 500px;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 350px;
+    height: 265px;
+    background-color: white;
+    border-top: 4px solid;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+    margin: 40px 0;
+    position: relative;
+}
+
+.card-1 {
+    border-color: hsl(180, 62%, 55%);
+}
+
+.card-2 {
+    border-color: hsl(0, 78%, 62%);
+}
+
+.card-3 {
+    border-color: hsl(34, 97%, 64%);
+}
+
+.card-4 {
+    border-color: hsl(212, 86%, 64%);
+}
+
+.col-1 {
+    margin-right: -220px;
+}
+
+.col-3 {
+    margin-left: -220px;
+}
+
+.card-img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 30px;
+}
+
+@media screen and (max-width: 1200px) {
+    h1 {
+        width: 300px;
+        margin: 30px auto;
+        font-size: 23px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+    
+    p {
+        font-size: 13px;
+    }
+
+    .about {
+        width: 275px;
+        font-size: 13px;
+    }
+    
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 1000px);
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+    }
+
+    .col-1, .col-3 {
+        margin: 0px 0;
+    }
+
+    .card {
+        margin: 40px 0 0 0;
+        width: 275px;
+    }
+
+    .card-4 {
+        margin-bottom: 50px;
+    }
+}
