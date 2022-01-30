@@ -9,7 +9,15 @@ var audioYellow = new Audio("sounds/yellow.mp3");
 var audioWrong = new Audio("sounds/wrong.mp3");
 
 // If not currently in playing state, reset/start game on any key press
-$(document).keydown(function() {
+$(document).keydown(start);
+$(document).on('tap', start);
+
+// Main game logic
+$(".btn").click(main);
+$(".btn").on('tap', main);
+
+function start() {
+  console.log()
   if (!$("#level-title").hasClass("playing")) {
     $("#level-title").removeClass("game-over");
     $("#level-title").addClass("playing");
@@ -17,34 +25,33 @@ $(document).keydown(function() {
     level++;
     simonsButtons(pattern);
   }
-});
+}
 
-// Main game logic
-$(".btn").click(function() {
-  // Check clicked button was the next correct button in the series
-  if (this === validate[0]) {
-    // If so, remove it from the array and play corresponding sound
-    validate.shift();
-    playSound(this);
-    // If array is empty, user successfully followed it, increase level and add another button
-    if (validate.length === 0) {
-      setTimeout(function() {
-        $("#level-title").text("Level " + level);
-        level++;
-        simonsButtons(pattern);
-      }, 1000);
-    }
-    // Otherwise set fail state and away keypress for restart
-  } else if ($("#level-title").hasClass("playing")) {
-    pattern = [];
-    validate = [];
-    level = 1;
-    audioWrong.play();
-    $("#level-title").addClass("game-over");
-    $("#level-title").removeClass("playing");
-    $("#level-title").text("Game Over :( Press Any Key to Restart!");
+function main() {
+// Check clicked button was the next correct button in the series
+if (this === validate[0]) {
+  // If so, remove it from the array and play corresponding sound
+  validate.shift();
+  playSound(this);
+  // If array is empty, user successfully followed it, increase level and add another button
+  if (validate.length === 0) {
+    setTimeout(function() {
+      $("#level-title").text("Level " + level);
+      level++;
+      simonsButtons(pattern);
+    }, 1000);
   }
-});
+  // Otherwise set fail state and away keypress for restart
+} else if ($("#level-title").hasClass("playing")) {
+  pattern = [];
+  validate = [];
+  level = 1;
+  audioWrong.play();
+  $("#level-title").addClass("game-over");
+  $("#level-title").removeClass("playing");
+  $("#level-title").text("Game Over :( Press Any Key to Restart!");
+}
+}
 
 // The following two mouse events animate the button as being pressed when clicking until release
 $(".btn").mousedown(function() {
