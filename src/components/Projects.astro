@@ -76,9 +76,9 @@ a {
   margin: auto;
 }
 
-@media (max-width: 1300px) {
-  .projects {
-    padding: 10% 7.5%;
+@media (min-width: 805px) and (max-width: 930px) {
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px,250px));
   }
 }
 
