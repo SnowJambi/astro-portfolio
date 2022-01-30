@@ -4,17 +4,15 @@ import Tilt from './Tilt.jsx'
 import data from '../data/projects.json'
 ---
 
-<div class='projects'>
-  <h2>What I've Been Working On</h2>
-  <div class='projects-grid'>
-    {data.projects.map((project) => (
-      <a href={project.url}>
-        <Tilt client:visible>
-          <Project title={project.title} body={project.body} image={project.image} />
-        </Tilt>
-      </a>
-    ))}
-  </div>
+<h2>What I've Been Working On</h2>
+<div class='projects-grid'>
+  {data.projects.map((project) => (
+    <a href={project.url}>
+      <Tilt client:visible>
+        <Project title={project.title} body={project.body} image={project.image} />
+      </Tilt>
+    </a>
+  ))}
 </div>
 
 <style lang="scss">
@@ -26,7 +24,13 @@ a {
   }
 }
 
-.projects {
+.projects-grid {
+  display: grid;
+  gap: 75px;
+  grid-template-columns: repeat(auto-fit, minmax(150px,300px));
+  justify-content: center;
+  max-width: 1050px;
+  margin: auto;
 
   :global(.project) {
     background: #232526 linear-gradient(to right, #333, #232526);
@@ -68,15 +72,6 @@ a {
       width: auto;
     }
   }
-}
-
-.projects-grid {
-  display: grid;
-  gap: 75px;
-  grid-template-columns: repeat(auto-fit, minmax(150px,300px));
-  justify-content: center;
-  max-width: 1050px;
-  margin: auto;
 }
 
 @media (min-width: 805px) and (max-width: 930px) {

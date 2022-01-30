@@ -3,13 +3,13 @@ const {color = 'var(--grad-dark)', text, angled, id} = Astro.props
 const angledClass = angled ? `${text} angled` : text
 ---
 
-<div id={id} class={angledClass} style=`background: ${color};`>
+<section id={id} class={angledClass} style=`background: ${color};`>
   <slot />
-</div>
+</section>
 
 <style lang='scss'>
 
-div {
+section {
   position: relative;
   margin-top: -100px;
   padding: 200px 20%;
@@ -38,19 +38,19 @@ div {
 }
 
 @media (max-width: 1930px) {
-  div {
+  section {
     padding: 200px 15%;
   }
 }
 
 @media (max-width: 1300px) {
-  div {
+  section {
     padding: 200px 10%;
   }
 }
 
 @media (max-width: 500px) {
-  div {
+  section {
     padding: 200px 5%;
   }
 }

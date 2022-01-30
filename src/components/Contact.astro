@@ -1,52 +1,41 @@
-<div class='contact'>
-  <h2>Contact Me</h2>
-  <div class='contact-grid'>
-    <div class='contact-details'>
-      <ul>
-        <li>
-          <a class='contactItem' href='mailto:Contact@Jadezak.com'>
-            <img src='/images/svg/email.svg' alt='Email icon' />
-            <p>Contact@Jadezak.com</p>
-          </a>
-        </li>
-        <li>
-          <a class='contactItem' href='https://www.linkedin.com/in/lachlanjadezak/'>
-            <img src='/images/svg/linkedin.svg' alt='Linkedin icon' />
-            <p>Linkedin</p>
-          </a>
-        </li>
-      </ul>
-    </div>
-    <img class='phone' src='/images/phone.webp' alt="A mobile phone" />
-  </div>
+<h2>Contact Me</h2>
+<div class='contact-grid'>
+  <ul>
+    <li>
+      <a class='contactItem' href='mailto:Contact@Jadezak.com'>
+        <img src='/images/svg/email.svg' alt='Email icon' />
+        <p>Contact@Jadezak.com</p>
+      </a>
+    </li>
+    <li>
+      <a class='contactItem' href='https://www.linkedin.com/in/lachlanjadezak/'>
+        <img src='/images/svg/linkedin.svg' alt='Linkedin icon' />
+        <p>Linkedin</p>
+      </a>
+    </li>
+  </ul>
+  <img class='phone' src='/images/phone.webp' alt="A mobile phone" />
 </div>
 
 <style lang="scss">
 
 // Contact section
-.contact {
-  ul {
-    list-style: none;
-  }
-
-  li {
-    margin: 20px 0;
-  }
+ul {
+  list-style: none;
+  padding: 0;
+  margin: auto;
 }
+
+li {
+  margin: 20px 0;
+}
+
 
 .contact-grid {
   display: grid;
   gap: 75px;
   grid-template-columns: repeat(auto-fit,minmax(150px,500px));
   justify-content: center;
-}
-
-.contact-details {
-  margin: auto;
-
-  ul {
-    padding: 0;
-  }
 }
 
 img.phone {
