@@ -79,20 +79,30 @@ img{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
 
-  .tech {
-    margin: 40px;
-    p {
-      font-family: Metropolis, Montserrat, Arial, Helvetica, sans-serif;
-      text-align: center;
-      font-weight: 900;
-    }
+.tech {
+  margin: 40px;
+  p {
+    font-family: Metropolis, Montserrat, Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-weight: 900;
   }
 }
 
-@media (max-width: 800px) {
-  .skills {
-    padding: 10% 7.5%;
+@media (max-width: 510px) {
+  .tech {
+    margin: 30px;
+  }
+}
+
+@media (max-width: 410px) {
+  img {
+    width: 80px;
+    height: 80px;
+  }
+  .tech {
+    margin: 20px;
   }
 }
 
