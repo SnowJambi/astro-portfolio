@@ -10,11 +10,11 @@ var audioWrong = new Audio("sounds/wrong.mp3");
 
 // If not currently in playing state, reset/start game on any key press
 $(document).keydown(start);
-$(document).on('tap', start);
+$(document).on('touchend', start);
 
 // Main game logic
 $(".btn").click(main);
-$(".btn").on('tap', main);
+$(".btn").on('touchend', main);
 
 function start() {
   console.log()
