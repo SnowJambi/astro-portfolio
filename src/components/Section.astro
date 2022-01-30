@@ -1,9 +1,9 @@
 ---
-const {color = 'var(--grad-dark)', text, angled} = Astro.props
+const {color = 'var(--grad-dark)', text, angled, id} = Astro.props
 const angledClass = angled ? `${text} angled` : text
 ---
 
-<div class={angledClass} style=`background: ${color};`>
+<div id={id} class={angledClass} style=`background: ${color};`>
   <slot />
 </div>
 
@@ -12,6 +12,7 @@ const angledClass = angled ? `${text} angled` : text
 div {
   position: relative;
   margin-top: -100px;
+  padding: 200px 20%;
 }
 
 .angled {
@@ -29,6 +30,18 @@ div {
   z-index: 2;
   :global(h2), :global(p) {
     color: var(--dark);
+  }
+}
+
+@media (max-width: 1930px) {
+  div {
+    padding: 200px 15%;
+  }
+}
+
+@media (max-width: 1300px) {
+  div {
+    padding: 200px 10%;
   }
 }
 

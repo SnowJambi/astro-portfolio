@@ -2,13 +2,13 @@
 const {title, body, image} = Astro.props
 ---
 
-<img class='projectImg' alt={image.alt} src={image.path} />
+<img class='project-img' alt={image.alt} src={image.path} />
 <h2>{title}</h2>
 <p>{body}</p>
 
 <style lang="scss">
 
-.projectImg {
+.project-img {
   border-radius: 10px 10px 0 0;
   object-fit: cover;
 }

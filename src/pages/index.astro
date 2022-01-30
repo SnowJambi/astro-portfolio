@@ -16,6 +16,7 @@ import Contact from '../components/Contact.astro'
 	<head>
 		<meta charset='utf-8' />
 		<title>Lachlan Jadezak | Portfolio</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <meta name='description' content='Junior web developer based in Canberra, Australia.' key='description' />
 		<link rel='stylesheet' type='text/css' href={Astro.resolve('../styles/reset.scss')} />
 		<link rel='stylesheet' type='text/css' href={Astro.resolve('../styles/index.scss')} />
@@ -27,18 +28,20 @@ import Contact from '../components/Contact.astro'
 		<div class='fixed-intro'>
 		  <Intro />
 	  </div>
-		<Section text={'dark'} color={'var(--grad-green)'} angled=false>
-				<About />
+		<main>
+			<Section text={'dark'} color={'var(--grad-green)'} angled=false id='about'>
+					<About />
+				</Section>
+			<Section text={'light'} color={'var(--grad-dark)'}>
+				<Tech />
 			</Section>
-		<Section text={'light'} color={'var(--grad-dark)'}>
-			<Tech />
-		</Section>
-		<Section text={'dark'} color={'var(--grad-green)'} angled=false>
-			<Projects />
-		</Section>
-		<Section text={'light'} color={'var(--grad-dark)'}>
-			<Contact />
-		</Section>
+			<Section text={'dark'} color={'var(--grad-green)'} angled=false>
+				<Projects />
+			</Section>
+			<Section text={'light'} color={'var(--grad-dark)'}>
+				<Contact />
+			</Section>
+		</main>
 		<footer class='footer'>
       <p>© 2022 Lachlan Jadezak</p>
     </footer>

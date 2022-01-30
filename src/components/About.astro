@@ -2,78 +2,67 @@
 import FlipButton from './FlipButton.astro'
 ---
 
-<div id='about'>
-  <h2>Hi, I'm <b>Lachlan</b></h2>
-  <div class='two-col'>
-    <img class='profile-picture' src='./images/profile.jpg' alt='Me playing bass'/>
-    <div class='summary'>
-      <p>I'm an eager frontend developer based in Canberra, doing my best to keep up with and learn the latest
-        technologies in the rapidly advancing world of web development.</p>
+<h2>Hi, I'm <b>Lachlan</b></h2>
+<div class='two-col'>
+  <img class='profile-picture' src='./images/profile.jpg' alt='Me playing bass'/>
+  <div class='summary'>
+    <p>I'm an eager frontend developer based in Canberra, doing my best to keep up with and learn the latest
+      technologies in the rapidly advancing world of web development.</p>
 
-      <p>You can probably find me brushing up on my JavaScript skills on codewars, following courses to learn
-        new
-        skills, or reading as much as I can about the current frontend landscape (someone send help, there's
-        like
-        50
-        chrome tabs open about JavaScript frameworks).</p>
+    <p>You can probably find me brushing up on my JavaScript skills on codewars, following courses to learn
+      new
+      skills, or reading as much as I can about the current frontend landscape (someone send help, there's
+      like
+      50
+      chrome tabs open about JavaScript frameworks).</p>
 
-      <p>I have completed a Certificate IV in Programming at Canberra Institute of Technology which has given
-        me some experience in working with SQL, C++, Java, and broader programming principles such as those of
-        Object
-        Oriented Programming. The course also taught a little about project management and development
-        methodologies
-        such as Agile.</p>
-
-      <p>If I'm not working I'm probably playing some bass guitar, out riding my motorbike or sitting back
-        watching the
-        MotoGP with an IPA.</p>
-      <div class='buttons'>
-        <FlipButton text={'Resumé'} link={'/resume.pdf'} />
-        <FlipButton text={'Contact Me'} link={'#contact'} />
-      </div>
+    <p>I have completed a Certificate IV in Programming at Canberra Institute of Technology which has given
+      me some experience in working with SQL, C++, Java, and broader programming principles such as those of
+      Object
+      Oriented Programming. The course also taught a little about project management and development
+      methodologies
+      such as Agile.</p>
+      
+    <p>If I'm not working I'm probably playing some bass guitar, out riding my motorbike or sitting back
+      watching the
+      MotoGP with an IPA.</p>
+    <div class='buttons'>
+      <FlipButton text={'Resumé'} link={'/resume.pdf'} />
+      <FlipButton text={'Contact Me'} link={'#contact'} />
     </div>
   </div>
 </div>
 
 <style lang='scss'>
 
-#about {
-overflow-y: auto;
-padding: 10% 20%;
+h2 {
+  font-family: Metropolis, Montserrat, Arial, Helvetica, sans-serif;
+  font-size: 6.4rem;
+  font-weight: 100;
+  margin: 0 0 80px;
+  text-align: center;
 
-  h2 {
-    font-family: Metropolis, Montserrat, Arial, Helvetica, sans-serif;
-    font-size: 6.4rem;
-    font-weight: 100;
-    margin: 0 0 80px;
-    text-align: center;
-
-    b {
-      font-weight: 900;
-    }
-
-    &::after {
-      animation: blink 1s steps(1, start) infinite;
-      background: var(--dark);
-      content: '';
-      display: inline-block;
-      height: 50px;
-      margin-bottom: -5px;
-      margin-left: 7px;
-      opacity: 0;
-      width: 3px;
-    }
+  b {
+    font-weight: 900;
   }
 
-  @keyframes blink {
-    50% { opacity: 0; }
-    100% { opacity: 1; }
+  &::after {
+    animation: blink 1s steps(1, start) infinite;
+    background: var(--dark);
+    content: '';
+    display: inline-block;
+    height: 50px;
+    margin-bottom: -5px;
+    margin-left: 7px;
+    opacity: 0;
+    width: 3px;
   }
 }
 
 .profile-picture {
   background-color: #000;
   border-radius: 20%;
+  box-shadow: 0 0 10px black;
 }
 
 .two-col {
@@ -81,8 +70,45 @@ padding: 10% 20%;
   display: flex;
 }
 
+.summary {
+  padding-left: 50px;
+}
+
 .buttons {
   margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1600px) {
+  .profile-picture {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .two-col {
+    flex-direction: column;
+  }
+  
+  .summary {
+    padding-left: 0;
+  }
+
+  .profile-picture {
+    border-radius: 50%;
+    margin-bottom: 20px;
+    max-width: 200px;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+  }
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 </style>

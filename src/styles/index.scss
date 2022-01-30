@@ -105,3 +105,19 @@ a {
     text-align: center;
   }
 }
+
+// Media queries
+@media (max-width: 750px) {
+  body {
+    padding: 0;
+  }
+
+  .fixed-border-top,
+  .fixed-border-bottom {
+    display: none;
+  }
+
+  .intro {
+    width: 100%;
+  }
+}
