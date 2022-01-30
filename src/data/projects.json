@@ -2,11 +2,20 @@
   "projects": [
     {
       "image": {
+        "path": "/images/fairwork.png",
+        "alt": "Fairwork website preview"
+      },
+      "title": "Fairwork.gov.au",
+      "body": "I've been part of a team migrating the Fairwork website to Drupal CMS, inlcuding site building, styling, content migration and developing new features.",
+      "url": "https://www.fairwork.gov.au"
+    },
+    {
+      "image": {
         "path": "/images/portfolio.png",
         "alt": "Jadezak website preview"
       },
       "title": "Jadezak.com",
-      "body": "I've rebuilt my website on Next.js to gain experience working with React, improve its performance, and update the styling!",
+      "body": "I've rebuilt my website with Astro to gain experience working with a new framework, improve its performance, and update the styling!",
       "url": "#"
     },
     {
