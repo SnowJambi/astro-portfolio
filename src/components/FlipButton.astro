@@ -15,6 +15,10 @@ const {link, height=45, width=175, text, unit='px'} = Astro.props
   text-align: center;
 }
 
+a:focus-visible {
+    outline-offset: 10px;
+  }
+
 .button-wrapper {
   display: inline-block;
   perspective: 500px;
