@@ -2,7 +2,7 @@
   "projects": [
     {
       "image": {
-        "path": "/images/fairwork.png",
+        "path": "/images/fairwork.webp",
         "alt": "Fairwork website preview"
       },
       "title": "Fairwork.gov.au",
@@ -11,7 +11,7 @@
     },
     {
       "image": {
-        "path": "/images/portfolio.png",
+        "path": "/images/portfolio.webp",
         "alt": "Jadezak website preview"
       },
       "title": "Jadezak.com",
@@ -20,7 +20,7 @@
     },
     {
       "image": {
-        "path": "/images/eplogo.png",
+        "path": "/images/eplogo-small.webp",
         "alt": "Eminence Projectiles Logo preview"
       },
       "title": "Eminence Projectiles Logo Design",
@@ -29,7 +29,7 @@
     },
     {
       "image": {
-        "path": "/images/fem-four.png",
+        "path": "/images/fem-four.webp",
         "alt": "Four card project preview"
       },
       "title": "Four Card Feature",
@@ -38,7 +38,7 @@
     },
     {
       "image": {
-        "path": "/images/fem-fylo.png",
+        "path": "/images/fem-fylo.webp",
         "alt": "Fylo landing page project preview"
       },
       "title": "Fylo Landing Page",
@@ -47,7 +47,7 @@
     },
     {
       "image": {
-        "path": "/images/social-media.png",
+        "path": "/images/social-media.webp",
         "alt": "Social Media Dashboard project preview"
       },
       "title": "Social Media Dashboard",
@@ -56,7 +56,7 @@
     },
     {
       "image": {
-        "path": "/images/simon.png",
+        "path": "/images/simon.webp",
         "alt": "Memory game project preview"
       },
       "title": "Memory game",
