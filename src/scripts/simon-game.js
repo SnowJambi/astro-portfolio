@@ -11,13 +11,10 @@ var audioWrong = new Audio("sounds/wrong.mp3");
 // If not currently in playing state, reset/start game on any key press
 $(document).click(start);
 
-
 // Main game logic
 $(".btn").click(main);
-$(".btn").on('touchend', main);
 
 function start(e) {
-  e.preventDefault()
   if (!$("#level-title").hasClass("playing")) {
     $("#level-title").removeClass("game-over");
     $("#level-title").addClass("playing");
@@ -28,7 +25,6 @@ function start(e) {
 }
 
 function main(e) {
-  e.preventDefault()
   // Check clicked button was the next correct button in the series
   if (this === validate[0]) {
     // If so, remove it from the array and play corresponding sound
@@ -49,17 +45,27 @@ function main(e) {
     level = 1;
     audioWrong.play();
     $("#level-title").addClass("game-over");
-    $("#level-title").removeClass("playing");
-    $("#level-title").text("Game Over :( Press Any Key to Restart!");
+    setTimeout(() => {
+      $("#level-title").removeClass("playing");
+    }, 100)
+    $("#level-title").text("Game Over :( Press or click to Restart!");
   }
 }
 
-// The following two mouse events animate the button as being pressed when clicking until release
+// The following events animate the button as being pressed when clicking or pressing until release
 $(".btn").mousedown(function() {
   $(this).addClass("pressed");
 });
 
 $(".btn").mouseup(function() {
+  $(this).removeClass("pressed");
+});
+
+$(".btn").on('touchstart', function() {
+  $(this).addClass("pressed");
+});
+
+$(".btn").on('touchend', function() {
   $(this).removeClass("pressed");
 });
 
