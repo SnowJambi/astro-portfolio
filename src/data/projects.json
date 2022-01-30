@@ -44,6 +44,15 @@
       "title": "Social Media Dashboard",
       "body": "A Front End mentor challenge to create a social media dashboard with switchable light and dark modes.",
       "url": "/social-media"
+    },
+    {
+      "image": {
+        "path": "/images/simon.png",
+        "alt": "Memory game project preview"
+      },
+      "title": "Memory game",
+      "body": "(Volume warning!) A simple memory game made with javascript, remember and click the buttons in order. (Note: Mobile touch yet to be implemented)",
+      "url": "/simon-game"
     }
   ]
 }
