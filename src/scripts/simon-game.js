@@ -16,8 +16,8 @@ $(document).on('touchend', start);
 $(".btn").click(main);
 $(".btn").on('touchend', main);
 
-function start() {
-  console.log()
+function start(e) {
+  e.preventDefault()
   if (!$("#level-title").hasClass("playing")) {
     $("#level-title").removeClass("game-over");
     $("#level-title").addClass("playing");
@@ -27,7 +27,8 @@ function start() {
   }
 }
 
-function main() {
+function main(e) {
+e.preventDefault()
 // Check clicked button was the next correct button in the series
 if (this === validate[0]) {
   // If so, remove it from the array and play corresponding sound
