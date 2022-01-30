@@ -62,22 +62,36 @@ h3 {
 .wrapper {
     display: flex;
     align-items: baseline;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 0 10% 0 10%;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .header-flex {
-    @extend .wrapper;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
     margin: 0;
+    flex-wrap: wrap;
+}
+
+.wrapper .overview {
+    gap: 0;
+}
+
+#first {
+    margin-bottom: 30px;
 }
 
 .button {
     display: flex;
     align-items: center;
-
+    flex: 0 0 auto;
     h3 {
         margin-right: 15px;
     }
+    padding-bottom: 20px;
 }
 
 .platform {
