@@ -51,7 +51,7 @@
         "alt": "Memory game project preview"
       },
       "title": "Memory game",
-      "body": "(Volume warning!) A simple memory game made with javascript, remember and click the buttons in order. (Note: Mobile touch yet to be implemented)",
+      "body": "(Volume warning!) A simple memory game made with javascript, remember and click the buttons in order.",
       "url": "/simon-game"
     }
   ]
